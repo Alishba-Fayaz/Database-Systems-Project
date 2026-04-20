@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VentureFlow — Entrepreneur Funding Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+    <!-- Left Branding Panel -->
+    <div class="auth-left">
+        <div class="auth-brand">
+            <div class="logo-mark">
+                <div class="logo-icon">💎</div>
+                <span class="logo-name">VentureFlow</span>
+            </div>
+            <h1 class="auth-headline">
+                Where Ideas<br>Meet <span>Capital</span>
+            </h1>
+            <p class="auth-sub">
+                A curated platform connecting visionary entrepreneurs with strategic investors. Fund the future, grow together.
+            </p>
+        </div>
+        <div class="auth-stats">
+            <div class="auth-stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-lbl">Projects Funded</span>
+            </div>
+            <div class="auth-stat-item">
+                <span class="stat-num">PKR 2B+</span>
+                <span class="stat-lbl">Total Raised</span>
+            </div>
+            <div class="auth-stat-item">
+                <span class="stat-num">1,200+</span>
+                <span class="stat-lbl">Active Users</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Auth Panel -->
+    <div class="auth-right">
+        <div class="auth-tabs" id="authTabs">
+            <button class="auth-tab active" onclick="switchTab('login')">Sign In</button>
+            <button class="auth-tab" onclick="switchTab('signup')">Create Account</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="loginForm">
+            <h2 class="auth-form-title">Welcome back</h2>
+            <p class="auth-form-sub">Sign in to continue to your dashboard.</p>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+            </div>
+
+            <button class="btn btn-primary" id="loginBtn" onclick="handleLogin()">
+                Sign In
+            </button>
+            <div class="alert" id="loginAlert"></div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signupForm" style="display:none;">
+            <h2 class="auth-form-title">Create account</h2>
+            <p class="auth-form-sub">Join VentureFlow as an entrepreneur, investor, or community member.</p>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="signupName" placeholder="Your full name" autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signupPassword" placeholder="Choose a strong password" autocomplete="new-password">
+            </div>
+            <div class="form-group">
+                <label>Account Role</label>
+                <select id="signupRole">
+                    <option value="">— Select your role —</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary" id="signupBtn" onclick="handleSignup()">
+                Create Account
+            </button>
+            <div class="alert" id="signupAlert"></div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
